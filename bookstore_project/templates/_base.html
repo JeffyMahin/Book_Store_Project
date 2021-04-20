@@ -14,7 +14,7 @@
 <div class="container">
     <header>
         <ul>
-            <li id="main-name"><a href="{% url 'home' %}">Book Store</a></li>
+            <li><a class="main" href="{% url 'home' %}">Book Store</a></li>
             <li><a href="{% url 'about' %}">About</a></li>
             {% if user.is_authenticated %}
             <li><a href="{% url 'logout' %}">Log Out</a></li>

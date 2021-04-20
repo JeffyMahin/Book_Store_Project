@@ -21,15 +21,11 @@ header ul{
     width: 100%;
 }
 
-header ul li{
+header ul li a{
     margin: 12px;
     display: block;
 }
 
-#main-name{
-    color: red;
-    float: left;
-}
 
 header ul li a{
     text-decoration: none;
@@ -39,4 +35,11 @@ header ul li a{
 header ul li a:hover{
     color: green;
     box-shadow: #4ac1f7;
+    text-decoration: none;
+    font-size: medium;
+}
+
+header ul li .main{
+    color: blue;
+    font-size: large;
 }
