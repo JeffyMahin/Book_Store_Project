@@ -38,12 +38,41 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django.contrib.sites', #new
+
+    #third party apps
+    'allauth',
+    'crispy_forms',
+    'allauth.account',
+
+    #local apps
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
-    'crispy_forms'
+
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
+# all-auth config
+SITE_ID = 1
+
+AUTHENTICATION_BACKEND = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',  #new
+)
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #new
+
+ACCOUNT_SESSION_REMEMBER = True  # Remove remember me tick mark from login page if True
+
+# ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False  #double password
+
+ACCOUNT_USERNAME_REQUIRED = True
+# ACCOUNT_AUTHENTICATION_METHOD = 'email'
+# ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_UNIQUE_EMAIL = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -147,4 +176,5 @@ STATICFILES_FINDERS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+# LOGOUT_REDIRECT_URL = 'home'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
