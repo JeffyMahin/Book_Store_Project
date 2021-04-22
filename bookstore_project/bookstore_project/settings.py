@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     #local apps
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    'books.apps.BooksConfig',
 
 ]
 
@@ -72,6 +73,10 @@ ACCOUNT_USERNAME_REQUIRED = True
 # ACCOUNT_AUTHENTICATION_METHOD = 'email'
 # ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_UNIQUE_EMAIL = True
+
+# DEFAULT_FROM_EMAIL = 'mokhlesurr031@gmail.com'  # email config file
+
+
 
 
 MIDDLEWARE = [

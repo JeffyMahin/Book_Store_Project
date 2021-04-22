@@ -1,0 +1,4 @@
+{% load i18n %}
+{% autoscape off %}
+{% blocktrans %} Please Confirm Your Sign Up {% endblocktrans %}
+{% endautoscape %}
