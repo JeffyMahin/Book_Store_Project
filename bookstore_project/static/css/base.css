@@ -43,3 +43,9 @@ header ul li .main{
     color: blue;
     font-size: large;
 }
+
+
+.img-style{
+    width: 300px;
+    height: auto;
+}

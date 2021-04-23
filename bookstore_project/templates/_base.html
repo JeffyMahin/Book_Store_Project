@@ -14,8 +14,10 @@
 <div class="container">
     <header>
         <ul>
-            <li><a class="main" href="{% url 'home' %}">Book Store</a></li>
+            <li><a class="main" href="{% url 'book_list' %}">Book Store</a></li>
+            {% if user.is_authenticated %}
             <li><a href="{% url 'book_list' %}">Books</a></li>
+            {% endif %}
             <li><a href="{% url 'about' %}">About</a></li>
             {% if user.is_authenticated %}
 {#            <li><a href="{% url 'logout' %}">Log Out</a></li>#}
